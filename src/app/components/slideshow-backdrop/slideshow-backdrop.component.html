@@ -1,0 +1,13 @@
+<ion-slides [options]='slidesOpt'>
+  <ion-slide *ngFor="let movie of Movies">
+    <ion-card>
+      <img [src]='movie.backdrop_path | img'>
+      <ion-card-title class='title'>{{movie.title}}</ion-card-title>
+    </ion-card>
+  </ion-slide>
+  <ion-slide class='slide-add'>
+    <ion-button (click)="loadMore()" expand="full" size='large' class='btn-add'>
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-slide>
+</ion-slides>
